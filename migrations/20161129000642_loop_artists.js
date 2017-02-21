@@ -1,4 +1,4 @@
-
+'use strict';
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('artists', (table) => {
@@ -18,7 +18,7 @@ exports.up = function(knex, Promise) {
     table.string('title').notNullable().defaultTo('');
     table.timestamps(true, true);
   })
-  ])
+]);
 };
 
 exports.down = function(knex, Promise) {
